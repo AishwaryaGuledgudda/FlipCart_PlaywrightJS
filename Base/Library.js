@@ -7,7 +7,7 @@ class Library{
     }
     //Launch chrome browser
     async launchBrowser(){
-        this.browser= await chromium.launch({headless:false});
+        this.browser= await chromium.launch({headless:true});
         this.context=await this.browser.newContext();
         this.page=await this.context.newPage();
         return this.page; // return page so that test can use it
